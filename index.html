@@ -1,23 +1,191 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Rising Tides, Displaced Lives - PYPX</title>
-      <link rel="stylesheet" href="styles.css">
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
-  </head>
-  <body>
-      <header class="hero">
-          <div class="hero-content animation-fade-in">
-              <h1>Rising Tides, Displaced Lives</h1>
-              <h2>PYPX - Sustainable Water & Oceans</h2>
-              <p class="central-idea">"Changes in water bodies affects life cycles."</p>
-          </div>
-      </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Tides, Displaced Lives</title>
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Waves Animation -->
+    <div class="ocean-bg">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
 
-      <main>
-          <section id="problem" class="section animation-fade-in">
-              <h2>The Problem</h2>
-              <p>Our problem is that people are moving (migrating) because of the sea Level rising, that
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Rising Tides, Displaced Lives</h1>
+            <h2>PYPX - Sustainable Water & Oceans</h2>
+            <p class="central-idea">"Changes in water bodies affects life cycles."</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- The Problem -->
+        <section id="problem" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">The Problem</h2>
+                <div class="problem-content">
+                    <div class="icon-box">🌊</div>
+                    <p class="lead-text">"Our problem is that people are moving (migrating) because of the sea Level rising, that’s why the cities that are too high below sea are over populating."</p>
+                    <div class="stats-grid">
+                        <div class="stat-item float-anim">
+                            <h3>8%</h3>
+                            <p>of Colombia's population lives in highly vulnerable coastal zones.</p>
+                        </div>
+                        <div class="stat-item float-anim">
+                            <h3>50%</h3>
+                            <p>of the Caribbean coastline suffers from critical coastal erosion.</p>
+                        </div>
+                        <div class="stat-item float-anim">
+                            <h3>4,900 km²</h3>
+                            <p>of lowlands are at high risk of permanent flooding.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evidence in Colombia -->
+        <section id="evidence" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">Evidence in Colombia</h2>
+                <p class="section-subtitle">Migration due to climate changes is a reality. In Colombia, regions like Cartagena, Barranquilla, Santa Marta, and Juanchaco are extreme hotspots for this crisis.</p>
+                
+                <div class="evidence-grid">
+                    <div class="evidence-text">
+                        <h3>Climate Displacement Factsheet (2016-2022)</h3>
+                        <ul>
+                            <li><strong>536,000</strong> internal displacements were recorded due to disasters.</li>
+                            <li><strong>2022 Fact:</strong> Unprecedented record year accounting for <strong>281,000</strong> displacements (52.4% of total).</li>
+                            <li><strong>Economic Impact:</strong> At-risk regions contribute to 76% of our GDP. Projected loss of 1.5% to 2.5% by 2050 without action.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="chart-container float-anim">
+                        <canvas id="displacementChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Concepts / Inquiry Learning Cycle -->
+        <section id="concepts" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">The Inquiry Learning Cycle</h2>
+                <div class="cards-grid">
+                    <div class="card" onclick="this.classList.toggle('flipped')">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Form</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>How the form of the countrys can change if the sea level increases?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="this.classList.toggle('flipped')">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Function</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>How the sea function to create energy?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="this.classList.toggle('flipped')">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Causation</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>What is the main cause of pollution at sea?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="this.classList.toggle('flipped')">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Change</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>How can we change the polution at sea?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="this.classList.toggle('flipped')">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Connection</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>How can we conect green house gases with sea level rise?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="this.classList.toggle('flipped')">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Perspective</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>What is the perspective of experts about conditons in oceans?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="this.classList.toggle('flipped')">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Responsability</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>How can we be responsable for taking care of the seas?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="action" class="fade-in">
+            <div class="container action-container">
+                <h2 class="section-title">Call to Action <br><span class="highlight">Bio-Economy</span></h2>
+                <div class="action-content">
+                    <div class="bio-economy-text">
+                        <p><strong>Bio Economy</strong> means to do money with sustainable actions helping the nature and the environment.</p>
+                        <p>In Colombia, initiatives like the proposed <strong>"Climate Refugee" Bill</strong> (2023) aim to formally recognize and protect displaced individuals. Sustainable housing and resilient urban coastal planning are pivotal bio-economy actions.</p>
+                        <p>Join us in spreading awareness and taking direct action to build a better future for displaced communities and our planet's oceans.</p>
+                    </div>
+                    <button class="btn-donate float-anim">Donate Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-title"><strong>Rising Tides, Displaced Lives</strong> | PYPX Project</p>
+            <p class="credits">
+                Created by:<br>
+                <span>Juan David Fajardo Aguirre</span> • 
+                <span>Martin Emilio Fierro Parra</span> • 
+                <span>Mateo Castaño Benavidez</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
