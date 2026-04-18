@@ -22,15 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => scrollObserver.observe(el));
     
-    // Interactividad para el botón de donación
-    const donateBtn = document.querySelector('.btn-donate');
-    if(donateBtn) {
-        donateBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Animación adicional o acción de feedback
-            alert('¡Gracias por tu interés en apoyar a las comunidades afectadas! La pasarela de pago para donaciones se implementará en la próxima fase del proyecto.');
-        });
-    }
 
     // Inicialización de Gráfico Chart.js basado en los datos del PDF
     const ctx = document.getElementById('displacementChart');
